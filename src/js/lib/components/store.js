@@ -6,7 +6,8 @@ const element = {
             tx: 0,
             tz: '0px',
             rotateZ: '0deg',
-            scale:'1'
+            scale:'1',
+            name: '0-0',
 		},
         { 
             zIndex: 3,
@@ -14,7 +15,8 @@ const element = {
             tx: '9.25%',
             tz: '-100px',
             rotateZ: '0deg',
-            scale:'1'
+            scale:'1',
+            name: '0-1'
         },
         { 
             zIndex: 2,
@@ -22,15 +24,17 @@ const element = {
             tx: '17%',
             tz: '-200px',
             rotateZ: '0deg',
-            scale:'1'            
+            scale:'1',
+            name: '0-2'           
         },
         { 
             zIndex: 1,
             translate3d: 'translate3d(calc(23.25% - 1440px), 0px, -300px)',
-            tx: '23.5%',
+            tx: '23.25%',
             tz: '-300px',
             rotateZ: '0deg',
-            scale:'1'            
+            scale:'1',
+            name: '0-3'            
         }
     ],
 	click1: [
@@ -40,15 +44,17 @@ const element = {
                 tx: '-9.25%',
                 tz: '-100px',
                 rotateZ: '0deg',
-                scale:'1'                
+                scale:'1',
+                name: '1-0'                
             },
             { 
-                zIndex:4,
+                zIndex: 4,
                 translate3d: 'translate3d(-480px, 0px, 0px)',
                 tx: -480,
                 tz: '0px',
                 rotateZ: '0deg',
-                scale:'1'                                
+                scale:'1',
+                name: '1-1'                                
             },
             { 
                 zIndex: 3,
@@ -56,7 +62,8 @@ const element = {
                 tx: '9.25%',
                 tz: '-100px',
                 rotateZ: '0deg',
-                scale:'1'                                   
+                scale:'1',
+                name: '1-2'                                  
             },
             { 
                 zIndex: 2,
@@ -64,7 +71,8 @@ const element = {
                 tx: '17%',
                 tz: '-200px',
                 rotateZ: '0deg',
-                scale:'1'                                 
+                scale:'1',
+                name: '1-3'                                 
             },
     ],
 	click2: [
@@ -82,7 +90,8 @@ const element = {
                 tx: '-9.25%',
                 tz: '-100px',
                 rotateZ: '0deg',
-                scale:'1'                          
+                scale:'1',
+                name: '2-1'                          
             },
             { 
                 zIndex: 4,
@@ -90,7 +99,8 @@ const element = {
                 tx: -960,
                 tz: '0px',
                 rotateZ: '0deg',
-                scale:'1'                                 
+                scale:'1',
+                name: '2-2'                                   
             },
             { 
                 zIndex: 1,
@@ -98,17 +108,19 @@ const element = {
                 tx: '9.25%',
                 tz: '-100px',
                 rotateZ: '0deg',
-                scale:'1'                                  
+                scale:'1',
+                name: '2-3'                                  
             },
     ],
     click3: [
             { 
                 zIndex: 1,
                 translate3d: 'translate3d(calc(-23.25% + 0px), 0px, -300px)',
-                tx: '-23.5%',
+                tx: '-23.25%',
                 tz: '-300px',
                 rotateZ: '0deg',
-                scale:'1'                                
+                scale:'1',
+                name: '3-0'                                  
             },
             { 
                 zIndex: 2,
@@ -116,7 +128,8 @@ const element = {
                 tx: '-17%',
                 tz: '-200px',
                 rotateZ: '0deg',
-                scale:'1'                                   
+                scale:'1',
+                name: '3-1'                                   
             },
             { 
                 zIndex: 3,
@@ -124,7 +137,8 @@ const element = {
                 tx: '-9.25%',
                 tz: '-100px',
                 rotateZ: '0deg',
-                scale:'1'                 
+                scale:'1',
+                name: '3-2'                 
             },
             { 
                 zIndex: 4,
@@ -132,7 +146,8 @@ const element = {
                 tx: -1440,
                 tz: '0px',
                 rotateZ: '0deg',
-                scale:'1' 
+                scale:'1',
+                name: '3-3' 
             },
     ]
 

@@ -6,7 +6,7 @@ const swiper = (windowWidth) => {
     let width = windowWidth + 'px';
     const parent = document.querySelector('.swiper-first.carousel')
     const slides = parent.querySelectorAll('.carousel__item');
-    const slidesField = parent.querySelector('.carousel__slides');
+    const slidesField = parent.querySelector('.carousel__swiper');
     const dots = parent.querySelectorAll('.carousel__indicators span');
     slidesField.style.width = 100 * slides.length + '%';
     slides.forEach(slide => {
@@ -51,7 +51,6 @@ const swiper = (windowWidth) => {
     });
 
     $('[data-swiper="prev"]').click((e) => {
-        
         e.preventDefault();
         if (offset == 0) {
             offset = +width.replace(/\D/g, '') * (slides.length - 1);
@@ -78,8 +77,6 @@ const swiper = (windowWidth) => {
         if(offset == (+width.replace(/\D/g, '') * (slides.length - 1))) {
             document.querySelector('[data-swiper="next"]').classList.add('swiper-button-disabled');
         }
-
-
     });
 
     $('.swiper-first .carousel__indicators span').click(e => {
@@ -136,9 +133,11 @@ const swiper = (windowWidth) => {
     intervalId = setInterval(intFunc, 3000);
 
     window.addEventListener('resize', () => {
-        width = window.screen.availWidth + 'px';
+        // width = window.screen.availWidth + 'px';
+        width = window.innerWidth + 'px';
         offset = 0;
         slidesField.style.transform = `translateX(0px)`;
+        
         slides.forEach(slide => {
             slide.style.width = width;
         });        

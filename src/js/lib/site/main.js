@@ -104,8 +104,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
         })
     }
 
-    swiper(window.screen.availWidth);
+    swiper(window.innerWidth);
     swiperSlide();
+
     if (window.screen.availWidth < 1199.98) {
         initHeaderDesctop();
         changeHeader_1199();
@@ -123,15 +124,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 
 window.addEventListener('resize', () => {
+    window.location.reload(); 
     if (window.screen.availWidth < 1199.98) {
         changeHeader_1199();
     }
     else {
         try {
             changeHeader();
-        } catch (error) {
-            
-        }
-
+        } catch (error) {}
     }  
 });

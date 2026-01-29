@@ -1,5 +1,6 @@
 .swiper-slide {
     width: 100vw;
+    // width: 100%;
 }
 
 // прячем прокрутку
@@ -17,13 +18,17 @@
 .carousel__slides {
     transition: transform 0.3s ease;
 }
+.carousel__swiper {
+    transition: transform 0.3s ease;
+}
 
 .swiper-slide-visible {
     max-width: 480px;
     width: min(480px, max(35vw, 315px));
     transition-duration: 350ms;
     @media (max-width: 767px) {
-        width: min(315px, max((100vw / 767) * 315, 100px));
+        // width: min(315px, max((100vw / 767) * 315, 150px));
+        width: 100%;
     }
 }
 
