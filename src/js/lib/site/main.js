@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 
 window.addEventListener('resize', () => {
-    window.location.reload(); 
+    // window.location.reload();
     if (window.screen.availWidth < 1199.98) {
         changeHeader_1199();
     }

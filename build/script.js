@@ -668,6 +668,12 @@ const swiperSlide = () => {
         isNext = true;
         isPrev = false;
 
+        if (X < -(+width / 3 )) { // тригер срабывания смены слайда
+            isTrigger = true;
+        } else {
+            isTrigger = false;
+        }
+
         if (X > - (width / 2 / coeff )) {
             let tz1, ty, tz;
             switch(slideIndex) {
@@ -980,6 +986,12 @@ const swiperSlide = () => {
         let trans;
         isNext = false;
         isPrev = true;
+
+        if (X > (+width / 3) ) { // тригер срабывания смены слайда
+            isTrigger = true;
+        } else {
+            isTrigger = false;
+        }        
         
         if (X < (+width / 2 / coeff )) {
             let tz1, ty, tz;
@@ -2213,7 +2225,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 
 window.addEventListener('resize', () => {
-    window.location.reload(); 
+    // window.location.reload();
     if (window.screen.availWidth < 1199.98) {
         changeHeader_1199();
     }
