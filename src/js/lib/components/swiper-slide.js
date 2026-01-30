@@ -3,9 +3,9 @@ import store from "../components/store"
 
 
 const swiperSlide = () => {
-    const parent = document.querySelector('.second__slider-cards.carousel')
+    const sliderCards = document.querySelector('.second__slider-cards');
+    const parent = document.querySelector('.second__slider-cards.carousel');
     const slides = parent.querySelectorAll('.carousel__item');
-    const slidesField = parent.querySelector('.carousel__slides');
     const dots = parent.querySelectorAll('.carousel__indicators span');
 
     const storeValue = Object.values(store);//делаем массив из объекта    
@@ -26,8 +26,10 @@ const swiperSlide = () => {
 
     function initial () {
         slideIndex = 0;
-        width = window.getComputedStyle(slides[0]).width.split('.')[0].replace(/\D/g, ''); //(2000.99222px или 2000px) выдаст 2000;
-        height = window.getComputedStyle(slides[0]).height.split('.')[0].replace(/\D/g, ''); //(2000.99222px или 2000px) выдаст 2000;
+        width = window.getComputedStyle(sliderCards).width.split('.')[0].replace(/\D/g, ''); //(2000.99222px или 2000px) выдаст 2000;
+        width = width - 20;
+        height = window.getComputedStyle(sliderCards).height.split('.')[0].replace(/\D/g, ''); //(2000.99222px или 2000px) выдаст 2000;
+
         dots.forEach(dot => dot.classList.remove('swiper-pagination-bullet-active'));
         dots[slideIndex].classList.add('swiper-pagination-bullet-active');
         coeff = width / 480 ;
@@ -883,6 +885,11 @@ const swiperSlide = () => {
             }
         }
     }
+
+    window.addEventListener('resize', () => {
+        initial();
+        initFunc(0);
+    });
 }
 
 

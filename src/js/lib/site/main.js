@@ -121,10 +121,20 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 });
 
+let widthWidow = 0;
 
+window.addEventListener('resize', (e) => {
+    // debugger
+    if (widthWidow !== e.target.outerWidth) {
+        widthWidow = e.currentTarget.innerWidth;
+        // window.location.reload();
+        if (window.location.href.indexOf('reload') == -1) {
+            debugger
+            window.location.reload();
+            window.location.replace(window.location.href+'?reload');
+        }
+    }
 
-window.addEventListener('resize', () => {
-    // window.location.reload();
     if (window.screen.availWidth < 1199.98) {
         changeHeader_1199();
     }
